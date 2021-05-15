@@ -1,11 +1,11 @@
-# Maintainer: Derek Taylor <derek@distrotube.com>
-pkgname=dmenu-distrotube-git
-pkgver=5.0.r22.8695f74
+# Maintainer: Ashin Antony <ashinant15@gmail.com>
+pkgname=dmenu-ashin-git
+pkgver=5.0
 pkgrel=1
 epoch=
-pkgdesc="A build of dmenu patched for centering, borders, grids, numbers, line height, mouse support, fuzzy matching and highlighting."
+pkgdesc="A build of dmenu patched for centering, borders, grids, numbers, line height, mouse support, fuzzy matching and highlighting from Ashin Antony."
 arch=(x86_64)
-url="https://www.gitlab.com/dwt1/dmenu-distrotube.git"
+url="https://www.github.com/ashincoder/dmenu-ashin.git"
 license=('MIT')
 groups=()
 depends=(ttf-hack ttf-joypixels)
@@ -30,15 +30,15 @@ pkgver() {
 }
 
 build() {
-	cd dmenu-distrotube
+	cd dmenu-ashin
     make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-    cd dmenu-distrotube  
+    cd dmenu-ashin  
     mkdir -p ${pkgdir}/opt/${pkgname}
     cp -rf * ${pkgdir}/opt/${pkgname}
     make PREFIX=/usr DESTDIR="${pkgdir}" install
     install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-    install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
+    install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.md"
 }
