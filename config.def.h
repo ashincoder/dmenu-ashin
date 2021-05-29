@@ -5,15 +5,14 @@ static int fuzzy = 1;        /* -F  option; if 0, dmenu doesn't use fuzzy matchi
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"FiraCode Nerd Font:pixelsize=12:antialias=true:autohint=true",
-	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#cccccc", "#282a36" },
-	[SchemeSel] = { "#ffffff", "#924441" },
-	[SchemeSelHighlight] = { "#d7d7d7", "#000000" },
-	[SchemeNormHighlight] = { "#e78481", "#000000" },
+	[SchemeSel] = { "#11121D", "#8c98d1" },
+	[SchemeSelHighlight] = { "#8c98d1", "#11121D" },
+	[SchemeNormHighlight] = { "#8c98d1", "#11121D" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 	[SchemeMid] = { "#d7d7d7", "#1f2026" },
 };
