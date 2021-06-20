@@ -1,2 +1,8 @@
 # dmenu-ashin
-my custom dmenu build some from distrotube
+with less patches.
+
+# Patches:
+ 
+ - fuzzy matching
+ - numbers
+ - line height
